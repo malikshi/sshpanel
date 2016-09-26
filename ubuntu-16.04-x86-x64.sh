@@ -5,8 +5,8 @@ clear
 
 # Make sure user is root
 
-if [ "$(id -u)" != "0" ]; then
-   echo "INIT 0!, You should be run this script with root user!" 1>&2
+if [[ $EUID -ne 0 ]]; then
+   echo "This script must be run as root" 1>&2
    exit 1
 fi
 
