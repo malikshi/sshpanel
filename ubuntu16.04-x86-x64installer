@@ -71,3 +71,4 @@ clear
 
 # Tell user installation is complete
 echo "Congratulation, SSHPANEL Now installed on your server!"
+echo "Default login email is : admin@admin.admin & default password is : admin"
