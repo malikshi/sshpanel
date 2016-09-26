@@ -60,7 +60,7 @@ echo "DB_PORT=3306" >> .env
 echo "DB_DATABASE=sshpanel" >> .env
 echo "DB_USERNAME=root" >> .env
 echo "DB_PASSWORD=$default" >> .env
-mysql -u root -p$default -e "use sshpanel; SET autocommit =0; source database/database.sql; COMMIT; exit;
+mysql -u root -p$default -e "use sshpanel; SET autocommit =0; source database/database.sql; COMMIT; exit;"
 
 
 
