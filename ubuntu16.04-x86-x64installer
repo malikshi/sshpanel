@@ -61,7 +61,7 @@ echo "DB_USERNAME=root" >> .env
 echo "DB_PASSWORD=$default" >> .env
 mysql -u root -p$default << /var/www/html/sshpanel/database.sql
 
-chown -R mysql:mysql /var/lib/mysql/
+
 chmod -R 755 /var/lib/mysql/
 chmod -R 755 /var/www/sshpanel/*
 chmod -R 755 /var/www/html/sshpanel/storage
