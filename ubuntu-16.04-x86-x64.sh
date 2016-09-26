@@ -8,7 +8,7 @@ clear
 if [ "$(id -u)" != "0" ]; then
    echo "INIT 0!, You should be run this script with root user!" 1>&2
    exit 1
-if
+fi
 
 # Installing webserver & configurate
 # Powered by LAMP (Linux, Apche, MySQL, PHP)
