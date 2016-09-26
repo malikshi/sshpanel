@@ -39,6 +39,7 @@ sudo apt install libapache2-mod-php php-mcrypt php-mysql php-mbstring php-curl p
 #######################################################
 
 # Changed webserver root directory
+apt install sed
 sed -i 's/var\/www/var\/www\/html\/sshpanel\/public/g' /etc/apache2/apache2.conf
 
 # Go to Webserver dir
@@ -59,7 +60,7 @@ echo "DB_PORT=3306" >> .env
 echo "DB_DATABASE=sshpanel" >> .env
 echo "DB_USERNAME=root" >> .env
 echo "DB_PASSWORD=$default" >> .env
-mysql -u root -p$default << database/database.sql;exit;
+mysql -u root -p$default -e "use sshpanel; SET autocommit =0; source database/database.sql; COMMIT; exit;
 
 
 
