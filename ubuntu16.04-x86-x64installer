@@ -62,10 +62,9 @@ echo "DB_PASSWORD=$default" >> .env
 mysql -u root -p$default << /var/www/html/sshpanel/database/database.sql
 
 
-chmod -R 755 /var/lib/mysql/
+
 chmod -R 755 /var/www/sshpanel/*
 chmod -R 755 /var/www/html/sshpanel/storage
-chown -R www-data:www-data /var/www/html/sshpanel/public
 
 #Restarting webserver
 sudo apache2 restart
