@@ -63,7 +63,7 @@ mysql -u root -p$default << /var/www/html/sshpanel/database/database.sql
 
 
 
-chmod -R 755 /var/www/sshpanel/*
+chmod -R 755 /var/www/html/sshpanel/*
 chmod -R 755 /var/www/html/sshpanel/storage
 
 #Restarting webserver
