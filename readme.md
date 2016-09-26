@@ -1,27 +1,46 @@
-# Laravel PHP Framework
+#SSHPANEL
+###An easy panel to manage SSH User's.
 
-[![Build Status](https://travis-ci.org/laravel/framework.svg)](https://travis-ci.org/laravel/framework)
-[![Total Downloads](https://poser.pugx.org/laravel/framework/d/total.svg)](https://packagist.org/packages/laravel/framework)
-[![Latest Stable Version](https://poser.pugx.org/laravel/framework/v/stable.svg)](https://packagist.org/packages/laravel/framework)
-[![Latest Unstable Version](https://poser.pugx.org/laravel/framework/v/unstable.svg)](https://packagist.org/packages/laravel/framework)
-[![License](https://poser.pugx.org/laravel/framework/license.svg)](https://packagist.org/packages/laravel/framework)
+This script is used to SSH seller to easily manage SSH user or create reseller.
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable, creative experience to be truly fulfilling. Laravel attempts to take the pain out of development by easing common tasks used in the majority of web projects, such as authentication, routing, sessions, queueing, and caching.
+## System Requirements
 
-Laravel is accessible, yet powerful, providing tools needed for large, robust applications. A superb inversion of control container, expressive migration system, and tightly integrated unit testing support give you the tools you need to build any application with which you are tasked.
-
-## Official Documentation
-
-Documentation for the framework can be found on the [Laravel website](http://laravel.com/docs).
-
-## Contributing
-
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](http://laravel.com/docs/contributions).
-
-## Security Vulnerabilities
-
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell at taylor@laravel.com. All security vulnerabilities will be promptly addressed.
+* PHP 5.2 >=
+* PDO PHP Extension
+* OpenSSL PHP Extension
+* Mbstring PHP Exstension
+* Tokenizer PHP Exstension
+* XML PHP Exstension
+* exec()
 
 ## License
 
-The Laravel framework is open-sourced software licensed under the [MIT license](http://opensource.org/licenses/MIT).
+SSHPANEL Is under [MIT License](https://opensource.org/licenses/MIT)
+
+## Developers
+
+**Rizal Fakhri Maha Putra**
+
+* Github @rizalio
+* Facebook @rizalfakhri.id
+* Blog https://www.rizal.io
+
+## Special Thanks to
+
+**People who help me on Developing  proccess**
+
+* [@neubert](http://stackoverflow.com/users/569976/neubert)
+* [@tanerkuc](http://stackoverflow.com/users/227562/tanerkuc)
+* [@maiorano84](http://stackoverflow.com/users/1347308/maiorano84)
+* [@can-celik](http://stackoverflow.com/users/2951316/can-celik)
+* [@ollieread](http://stackoverflow.com/users/3104359/ollieread)
+* [@ridho-virman](https://web.facebook.com/scriptkiddies777)
+
+## Donate
+
+**This application is FREE**
+But if you will you can donate to me with place my ads code on this app :)
+
+## How To Install
+
+**Please Read the Wiki**
