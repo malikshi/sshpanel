@@ -39,7 +39,7 @@ sudo apt install libapache2-mod-php php-mcrypt php-mysql php-mbstring php-curl p
 #######################################################
 
 # Changed webserver root directory
-sed -i 's/var\/www/var\/www\/html\/sshpanel/g' /etc/apache2/apache2.conf
+sed -i 's/var\/www/var\/www\/html\/sshpanel\/public/g' /etc/apache2/apache2.conf
 
 # Go to Webserver dir
 cd /var/www/html
@@ -59,3 +59,15 @@ echo "DB_PORT=3306" >> .env
 echo "DB_DATABASE=sshpanel" >> .env
 echo "DB_USERNAME=root" >> .env
 echo "DB_PASSWORD=$default" >> .env
+
+chown -R mysql:mysql /var/lib/mysql/
+chmod -R 755 /var/lib/mysql/
+chmod -R 755 /var/www/sshpanel/*
+chmod -R 755 /var/www/html/sshpanel/storage
+chown -R www-data:www-data /var/www/html/sshpanel/public
+
+# Complete installation
+clear 
+
+# Tell user installation is complete
+echo "Congratulation, SSHPANEL Now installed on your server!"
