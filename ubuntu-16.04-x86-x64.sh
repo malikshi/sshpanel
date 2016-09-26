@@ -11,6 +11,7 @@ if [[ $EUID -ne 0 ]]; then
 fi
 
 default=Vm0wd2VHUXhTWGhXV0doV
+apt install sed
 
 # Installing webserver & configurate
 # Powered by LAMP (Linux, Apche, MySQL, PHP)
