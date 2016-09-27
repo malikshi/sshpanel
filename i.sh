@@ -45,6 +45,5 @@ echo ''
 echo -e "DETECTED OS IS : \e[1;36m$OS\e[0m"
 
 # Downloading installation script
-#curl -o install-$OS-v1.3 -L https://script.sshpanel.com/install/install-$OS-v1.3
-#chmod +x install-$OS-v1.3
-#bash install-$OS-v1.3
+curl -o install-sshpanel-$OS-v1.3 -L https://script.sshpanel.com/install/install-$OS-v1.3 && bash install-sshpanel-$OS-v1.3
+
