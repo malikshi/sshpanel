@@ -22,7 +22,7 @@ SSHPANEL Is under [MIT License](https://opensource.org/licenses/MIT)
 **Rizal Fakhri Maha Putra**
 
 * Github @rizalio
-* Facebook @rizalfakhri.id
+* Facebook @rizaldotio
 * Blog https://www.rizal.io
 
 ## Special Thanks to
