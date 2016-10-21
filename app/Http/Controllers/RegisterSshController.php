@@ -90,7 +90,7 @@ class RegisterSshController extends Controller
           {
             if($prices = DB::table('app_data')->get())
             {
-              $price = $prices[0]->prices;
+              $price = $dump[0]->prices;
               if(DB::table('ssh_users')->where('name', $request->sshname)->where('on_server', $dump[0]->ip)->count() > 0 )
               {
                 return view('create')->with('userexist', $request->sshname);

@@ -11,15 +11,17 @@
                     <h3 style="text-align: center !important;">NO SERVER FOUND</h3>
                   @else
                     @foreach($servers as $server)
-                      <div class="col-md-3">
-                        <div class="panel panel-default">
-                          <div class="panel-body">
-                            <span class="glyphicon glyphicon-tasks list-action"></span>
-                            <hr>
-                            <div class="title" style="text-transform:uppercase !important;">{{$server->name}}</div>
+                      <a href="/server/{{$server->id}}">
+                        <div class="col-md-3">
+                          <div class="panel panel-default">
+                            <div class="panel-body">
+                              <span class="glyphicon glyphicon-tasks list-action"></span>
+                              <hr>
+                              <div class="title" style="text-transform:uppercase !important;">{{$server->name}}</div>
+                            </div>
                           </div>
                         </div>
-                      </div>
+                      </a>
                     @endforeach
                   @endif
                   <div class="col-md-12">

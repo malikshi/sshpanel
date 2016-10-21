@@ -47,6 +47,8 @@
                         <input type="text" ng-model="serverservice" name="serverservice" class="form-control" value="">
                         <label for="serverport">Server Ports (ex: 22/80/443. PS : add multiple ports delimite by (,) coma)</label>
                         <input type="text" ng-model="serverports" name="serverports" class="form-control" value="">
+                        <label for="serverprices">Server Prices (ex: 1000, 10000, 200000 <b>Is not money curency)</label>
+                        <input type="text" ng-model="serverprices" name="serverprices" class="form-control" value="">
                         <br />
                         <button type="submit" name="button" class="btn btn-success">Add Server!</button>
                       </form>
@@ -79,6 +81,8 @@
                                 <b>Service : <b style="text-transform:uppercase !important;">@{{serverservice}}</b></b>
                                 <hr />
                                 <b>Ports : @{{serverports}}</b>
+                                <hr />
+                                <b>Prices : @{{serverprices}}</b>
                                 <hr />
                                 <div class="title" style="text-transform:uppercase !important;">@{{servername}} | BUY</div>
                               </div>

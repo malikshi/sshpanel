@@ -35,7 +35,7 @@
                             </div>
                         @elseif(isset($serverabort))
                             <div class="alert alert-danger">
-                              Server error detected, PLease try again later
+                              Server error detected, Please try again later
                             </div>
                         @elseif(isset($balanceerror))
                             <div class="alert alert-danger">

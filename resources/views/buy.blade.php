@@ -24,6 +24,8 @@
                             <hr />
                             <b>Ports : {{$list->port}}</b>
                             <hr />
+                            <b>Price: {{$list->prices}}</b>
+                            <hr />
                             <div class="title">{{strtoupper($list->name)}} | BUY</div>
                           </div>
                         </div>

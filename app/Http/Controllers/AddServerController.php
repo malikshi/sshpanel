@@ -21,9 +21,9 @@ class AddServerController extends Controller
 
     }
 
-    public function randkey()
+    public static function randkey()
     {
-      return substr(RegisterSshController::srvencrypt(uniqid()),0,15);
+      return substr(md5(base64_encode(uniqid())),0,20);
     }
 
     /**
@@ -59,7 +59,8 @@ class AddServerController extends Controller
             'serverhost'    => 'required',
             'serverloc'     => 'required',
             'serverservice' => 'required',
-            'serverports'   => 'required'
+            'serverports'   => 'required',
+            'serverprices'  => 'required'
           ]);
           if(!$validate->fails())
           {
@@ -72,7 +73,8 @@ class AddServerController extends Controller
               'location'    => $request->serverloc,
               'service'     => $request->serverservice,
               'port'        => $request->serverports,
-              'key'         => AddServerController::randkey()
+              'key'         => AddServerController::randkey(),
+              'prices'      => $request->serverprices
             ]))
             {
               return view('addserver')->with('success', $request->all());
