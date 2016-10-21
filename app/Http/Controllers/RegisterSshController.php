@@ -21,7 +21,7 @@ class RegisterSshController extends Controller
         if(Auth::check())
         {
           $server = DB::table('servers')->where('key', $key)->get();
-          return view('create')->with('servers', $server);
+          return view('create')->with('servers', $server)->with('key', $key);
         }
         else
         {
@@ -93,7 +93,7 @@ class RegisterSshController extends Controller
               $price = $dump[0]->prices;
               if(DB::table('ssh_users')->where('name', $request->sshname)->where('on_server', $dump[0]->ip)->count() > 0 )
               {
-                return view('create')->with('userexist', $request->sshname);
+                return view('create')->with('userexist', $request->sshname)->with('key', $request->_key);
               }
               else
               {
@@ -101,7 +101,7 @@ class RegisterSshController extends Controller
                 $command = new \phpseclib\Net\SSH2($dump[0]->ip);
                 if(!$command->login($dump[0]->user, RegisterSshController::srvdecrypt($dump[0]->password)))
                 {
-                  return view('create')->with('serverabort', $request->sshname);
+                  return view('create')->with('serverabort', $request->sshname)->with('key', $request->_key);
                 }
                 else
                 {
@@ -140,24 +140,24 @@ class RegisterSshController extends Controller
                     ]))
                     {
                       DB::table('users')->where('email', Auth::user()->email)->decrement('balance', $price);
-                      return view('create')->with('valid', $valid);
+                      return view('create')->with('valid', $valid)->with('key', $request->_key);
                     }
                   }
                   else
                   {
-                    return view('create')->with('balanceerror', Auth::user()->balance);
+                    return view('create')->with('balanceerror', Auth::user()->balance)->with('key', $request->_key);
                   }
                 }
               }
             }
             else
             {
-              return view('create')->with('error', $request->sshname);
+              return view('create')->with('error', $request->sshname)->with('key', $request->_key);
             }
           }
           else
           {
-            return view('create')->with('serverabort', $request->sshname);
+            return view('create')->with('serverabort', $request->sshname)->with('key', $request->_key);
           }
         }
     }

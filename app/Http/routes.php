@@ -25,7 +25,7 @@ Route::group(['middleware' => '\App\Http\Middleware\LoginMiddleware'], function(
     return View::make('topup');
   });
   Route::get('buy/{server}', ['uses' => 'RegisterSshController@index']);
-  Route::post('/buy/finish', 'RegisterSshController@store');
+  Route::post('/buy/{key}', 'RegisterSshController@store');
   Route::get('/server', 'ServerViewController@index');
 });
 
@@ -59,4 +59,5 @@ Route::group(['middleware' => '\App\Http\Middleware\AdminMiddleware'], function(
   Route::get('/server/{id}/delete', ['uses' => 'EditServerController@destroy']);
   Route::get('/server/{id}/reboot', ['uses' => 'EditServerController@reboot']);
   Route::get('/server/{id}/user', ['uses' => 'EditServerController@show']);
+  Route::get('/cron', 'CronController@destroy');
 });

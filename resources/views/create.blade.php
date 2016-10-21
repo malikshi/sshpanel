@@ -42,7 +42,7 @@
                               Sorry, Your balance not enough to buy an SSH Account
                             </div>
                         @endif
-                        <form method="post" action="/buy/finish">
+                        <form method="post" action="/buy/{{$key}}">
                           <label for="sshname">SSH Username</label>
                           <input type="hidden" name="_token" value="{{csrf_token()}}">
                           <input type="hidden" name="_key" value="{{@$servers[0]->key}}">
